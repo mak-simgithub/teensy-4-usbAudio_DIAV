@@ -8,17 +8,17 @@ Until such time as these changes are merged into the Teensyduino release package
 
 ### Core files ###
 These provide the multi-channel USB audio capability.
-* Locate the core files folder, e.g. for Arduino 1.8.19 on Windows `C:\Program Files (x86)\Arduino\hardware\teensy\avr\cores\teensy4`
+* Locate the core files folder, e.g. for Arduino 1.8.19 on Windows `/.arduino15/packages/teensy/hardware/avr/1.59.0/cores/teensy4`
 * Copy the contents of the `changedCorefiles` folder into the cores folder, overwriting as necessary
 
 ### GUI files ###
 These provide the Design Tool with ability to create an audio design using multi-channel USB objects. 
-* Locate the audio library GUI folder, e.g. for Arduino 1.8.19 on Windows `C:\Program Files (x86)\Arduino\hardware\teensy\avr\libraries\Audio\gui`
+* Locate the audio library GUI folder, e.g. for Arduino 1.8.19 on Windows `~/.arduino15/packages/teensy/hardware/avr/1.59.0/libraries/Audio/`
 * Copy the contents of the `changedGUI` folder into the GUI folder, overwriting as necessary
 
 ### Config files ###
 These provide the Arduino IDE with extra entries in the Tools menu, allowing selection of the USB channel count. 
-* Locate the config files folder, e.g. for Arduino 1.8.19 on Windows `C:\Program Files (x86)\Arduino\hardware\teensy\avr`
+* Locate the config files folder, e.g. for Arduino 1.8.19 on Windows `~/.arduino15/packages/teensy/hardware/avr/1.59.0/`
 * If you have no `boards.local.txt`
   * simply copy this in from the `changedConfigfiles` folder
 * else 
@@ -53,5 +53,6 @@ Main features are:
 - USB input: Parameters of the PI controller that computes the feedback can optionally be set at the constructor.
 - USB input and output: The target number of buffered samples can be configured. (Can e.g. be increased if buffer under- or overruns occur.)
 - USB input and ouput provide information about their status (getStatus) like if and how many buffer over- and under-runs occurred.
+
 
 Tested with Teensyduino 1.59 + Arduino IDE being 1.8.19 and Visual Studio Code + Platformio/Teensy platform version 5.0.0
