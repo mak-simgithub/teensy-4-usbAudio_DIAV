@@ -8,7 +8,7 @@ Until such time as these changes are merged into the Teensyduino release package
 
 ### Core files ###
 These provide the multi-channel USB audio capability.
-* Locate the core files folder, e.g. for Arduino 1.8.19 on Windows `/.arduino15/packages/teensy/hardware/avr/1.59.0/cores/teensy4`
+* Locate the core files folder, e.g. for Arduino 1.8.19 on Linux `/.arduino15/packages/teensy/hardware/avr/1.59.0/cores/teensy4`
 * Copy the contents of the `changedCorefiles` folder into the cores folder, overwriting as necessary
 
 ### GUI files ###
@@ -56,3 +56,4 @@ Main features are:
 
 
 Tested with Teensyduino 1.59 + Arduino IDE being 1.8.19 and Visual Studio Code + Platformio/Teensy platform version 5.0.0
+
