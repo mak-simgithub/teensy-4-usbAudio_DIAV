@@ -2,34 +2,12 @@
 This suite of files enables 2-, 4-, 6- or 8-channel USB I/O to be used with the Teensy 4.x Audio library. It has been developed based on Teensyduino 1.59, so no representations are made as to whether it might work starting from older versions!
 
 ## Installation ##
-Until such time as these changes are merged into the Teensyduino release package, installation is a manual process. These instructions assume you are working from an unmodified installation - if you have already modified any of the files involved you will need to figure out how to merge these changes yourself.
-
-**It is strongly recommended that you keep safety copies of any files that you overwrite or delete, so that if something goes wrong you can go back to a working installation.**
-
-### Core files ###
-These provide the multi-channel USB audio capability.
 * Locate the core files folder, e.g. for Arduino 1.8.19 on Linux `/.arduino15/packages/teensy/hardware/avr/1.59.0/`
-* Copy the contents of the `changedCorefiles` folder into the cores folder, overwriting as necessary
 
-### GUI files ###
-These provide the Design Tool with ability to create an audio design using multi-channel USB objects. 
-* Locate the audio library GUI folder, e.g. for Arduino 1.8.19 on Windows `~/.arduino15/packages/teensy/hardware/avr/1.59.0/libraries/Audio/`
-* Copy the contents of the `changedGUI` folder into the GUI folder, overwriting as necessary
+and copy repo into it.
 
-### Config files ###
-These provide the Arduino IDE with extra entries in the Tools menu, allowing selection of the USB channel count. 
-* Locate the config files folder, e.g. for Arduino 1.8.19 on Windows `~/.arduino15/packages/teensy/hardware/avr/1.59.0/`
-* If you have no `boards.local.txt`
-  * simply copy this in from the `changedConfigfiles` folder
-* else 
-  * merge the contents of `changedConfigfiles/boards.local.txt` into your existing file
-* Make a safety copy of `platform.txt`, then delete the one in the config folder
-* If you are using Arduino IDE 1.x (e.g. 1.8.19)
-  * copy `changedConfigfiles/TD_platform.txt` into the config folder, and rename to `platform.txt`
-* else (you are using Arduino IDE 2.x)
-  * copy `changedConfigfiles/BM_platform.txt` into the config folder, and rename to `platform.txt`
-  * ensure the IDE is *not* running
-  * find the Arduino 2.x cache folder, e.g. `C:\Users\<user name>\AppData\Roaming\arduino-ide\` and delete it
+WHEN USING MAKE SURE LINUX DID NOT MUTE THE TEENSY!
+
 
 ## In use ##
 * In the updated Design Tool, place one usb, usb_quad, usb_hex or usb_oct input and/or output object(s) in your design, and export as usual
@@ -56,5 +34,4 @@ Main features are:
 
 
 Tested with Teensyduino 1.59 + Arduino IDE being 1.8.19 and Visual Studio Code + Platformio/Teensy platform version 5.0.0
-
 
